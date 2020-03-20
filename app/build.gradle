@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+
+android {
+    buildToolsVersion '28.0.3'
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.team123.mobilecollector"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    defaultConfig {
+        ndk {
+            abiFilters "armeabi-v7a", "x86", "armeabi", "mips"
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    google()
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:support-media-compat:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+
+    // RxAndroidBle
+    implementation 'com.polidea.rxandroidble:rxandroidble:1.5.0'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.android.support:support-annotations:27.1.0'
+    // GSON
+    implementation 'com.google.code.gson:gson:2.8.2'
+    // Movesense .aar lib
+    implementation (name: 'mdslib', version: '1.28.1(1)-release', ext: 'aar')
+    // ButterKnife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
+
+    implementation 'pub.devrel:easypermissions:0.2.1'
+    //DFU Library
+    implementation 'no.nordicsemi.android:dfu:1.6.0'
+    // Constraint Layout
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    // AWS Kinesis
+    implementation ("com.amazonaws:aws-android-sdk-kinesis:2.11.+") { transitive = true }
+
+    //Avatar
+    implementation project(":Avatar2-1.0")
+
+    //Tensorflow
+    implementation 'org.tensorflow:tensorflow-android:1.10.0'
+    implementation 'org.tensorflow:tensorflow-lite:+'
+
+    //websocket
+    implementation 'org.java-websocket:Java-WebSocket:1.4.0'
+
+    //TEST
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

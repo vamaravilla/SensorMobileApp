@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.team123.mobilecollector">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true"/>
+
+    <application
+        android:name=".MobileCollectorApp"
+        android:allowBackup="true"
+        tools:replace="android:icon,android:theme"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".A00_MainView.MainViewActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MY_ACTION"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".A01_SensorsSetup.MultiConnectionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".A02_SessionsManager.SessionsManagerActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".A04_3DEvaluation.EvaluationActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".A05_TrainingManager.TrainingManagerActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths"/>
+        </provider>
+
+        <receiver
+            android:name=".bluetooth.BluetoothStatusReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".adb.AdbBridge"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MOVESENSE"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".A02_SessionsManager.SessionsService" />
+        <service android:name=".A04_3DEvaluation.JumpService" />
+        <service android:name=".A05_TrainingManager.TrainingService" />
+
+    </application>
+
+</manifest>

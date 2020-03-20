@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="8dp">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/scroll_sensors_connected"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:fillViewport="true"
+            android:background="@color/colorBackground">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <ImageView
+            android:id="@+id/sessionManger_img"
+            android:scaleType="fitCenter"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_estimate_24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/sessionManger_activity_tv"/>
+
+    <TextView
+        android:id="@+id/sessionManger_activity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="90dp"
+        android:textSize="14sp"
+        android:text="@string/deafaul_activity_text"
+        android:textColor="@color/colorText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/sessionManger_buttons"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/sessionManger_stop"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:background="@drawable/yellow_stroke"
+            android:textColor="@color/colorText"
+            android:textSize="14sp"
+            android:text="@string/start_session_text"
+            android:textAlignment="center"
+            />
+
+       <!--<TextView
+            android:id="@+id/sessionManger_upload"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/sessionManger_stop"
+            android:background="@drawable/yellow_stroke"
+            android:padding="10dp"
+            android:text="@string/upload_text"
+            android:textColor="@color/colorText"
+            android:textAlignment="center"
+            android:textSize="14sp" />-->
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
+

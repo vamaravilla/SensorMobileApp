@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/mainView_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:text="@string/user_text"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorGreen"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <!--1-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mainView_card_height"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:id="@+id/mainView_sensorsSetup_L1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@color/colorMainViewCardBackground"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/mainView_sensorsSetup_text"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_walk_24dp"/>
+
+
+                <TextView
+                    android:id="@+id/mainView_sensorsSetup_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/ButtonColorBackground"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/sensors_training_text"
+                    android:textColor="@color/ButtonColorText"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mainView_sessionsManager_Ll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@color/colorMainViewCardBackground"
+                android:gravity="center">
+
+                <ImageView
+                    android:scaleType="fitCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/mainView_sessionsManager_text"
+                    android:src="@drawable/ic_estimate_24dp"/>
+
+                <TextView
+                    android:id="@+id/mainView_sessionsManager_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/ButtonColorBackground"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/session_evaluation_text"
+                    android:textColor="@color/ButtonColorText"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!--2-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mainView_card_height"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:id="@+id/mainView_settings_Ll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@color/colorMainViewCardBackground"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_above="@id/mainView_settings_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_account_circle_24dp"/>
+
+                <TextView
+                    android:id="@+id/mainView_settings_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="#3d545252"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/settings_text"
+                    android:textColor="@color/ButtonColorText"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mainView_telemetry_Ll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@color/colorMainViewCardBackground"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_above="@id/mainView_telemetry_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_3d_rotation_24dp"/>
+
+                <TextView
+                    android:id="@+id/mainView_telemetry_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="#3d545252"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/telemetry_text"
+                    android:textColor="@color/ButtonColorText"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/mainView_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:text="@string/footer_text"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

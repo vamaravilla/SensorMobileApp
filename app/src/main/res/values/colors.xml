@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#282829</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#5f72d8</color>
+
+    <!-- General -->
+    <color name="inactiveTintColor">#7d211e1e</color>
+    <color name="colorBackground">#515050</color>
+    <!--<color name="colorBackground">#24212a</color>-->
+
+    <color name="colorYellow">#22ab20</color>
+    <color name="colorYellowBack">#5fb040</color>
+
+    <color name="colorYellowUno">#dad739</color>
+    <color name="colorYellowBackUno">#afae5c</color>
+
+
+    <color name="colorGreen">#22ab20</color>
+    <color name="colorText">#FFF</color>
+    <color name="colorConnect">#5fb040</color>
+
+
+
+    <!-- Button colors -->
+    <color name="ButtonColorBackground">#3d545252</color>
+    <color name="ButtonColorText">#FFF</color>
+    <color name="colorMainViewCardBackground">#3e3e3e</color>
+
+</resources>

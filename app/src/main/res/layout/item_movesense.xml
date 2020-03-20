@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/colorMainViewCardBackground"
+                android:orientation="vertical"
+                >
+
+
+    <TextView
+        android:id="@+id/movesense_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/movesense_address"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorText"
+        android:textSize="12sp"
+        tools:text="@string/Movesense"/>
+
+    <TextView
+        android:id="@+id/movesense_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movesense_name"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorText"
+        android:textSize="12sp"
+        tools:text="21:21:34:21"/>
+
+    <TextView
+        android:id="@+id/movesense_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movesense_address"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorConnect"
+        android:textSize="15sp"
+        tools:text="Available"/>
+
+    <ImageView
+        android:id="@+id/movesense_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:layout_alignParentRight="true"
+        android:padding="5dp"
+        android:src="@drawable/movesense_sensor_60"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorBackground" />-->
+
+</RelativeLayout>
